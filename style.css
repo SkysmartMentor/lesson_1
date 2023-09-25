@@ -1,0 +1,80 @@
+@import url(./animation.css);
+@import url(./fonts/fonts.css);
+
+:root {
+    --height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: StratosSkyeng, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: var(--height);
+    background-color: black;
+    color: black;
+    overflow-y: hidden;
+}
+
+.main {
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.main__title,
+.main__image,
+.main__subtitle {
+    width: 100%;
+    text-align: center;
+    background-color: #cab0f3;
+    border-radius: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.main__title,
+.main__subtitle {
+    padding: 25px 0;
+}
+
+.main__title {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.main__image {
+    object-fit: cover;
+}
+
+.main__subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.main__title:hover,
+.main__image:hover,
+.main__subtitle:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.main__title:active,
+.main__subtitle:active {
+    color: white;
+}
+
+.main__image:active {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
